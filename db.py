@@ -100,3 +100,7 @@ class Collection:
             md5 = read_string(file)
             self.beatmap_md5s.append(md5)
             print(f'beatmap#{b+1} MD5: {md5}')
+
+if __name__ == '__main__':
+    import doctest
+    doctest.testmod()
