@@ -38,7 +38,8 @@ with open(osu_osu_file, "rb") as f:
 
     for c in range(beatmap_count):
 
-        entry_size = read_int(f)
+        if osu_version < 20191106:
+            entry_size = read_int(f)
         artist_name, artist_name_u = read_string(f), read_string(f)
         song_title, song_title_u = read_string(f), read_string(f)
         creator_name = read_string(f)
